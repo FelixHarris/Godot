@@ -25,9 +25,25 @@ func _ready():
 
 
 func update_animation(anim):
-	$AnimationPlayer.play(anim)
+	match(anim):
+		state.FALL:
+			$AnimationPlayer.play("Fall")
+		state.ATTACK:
+			$AnimationPlayer.play("Attack")
+		state.IDLE:
+			$AnimationPlayer.play("Idle")
+		state.JUMP:
+			$AnimationPlayer.play("Jump")
+		state.PUSHING:
+			$AnimationPlayer.play("Pushing")
+		state.RUNNING:
+			$AnimationPlayer.play("Running")
+	pass
 
-func handle_state(state):
+func handle_state(player_state):
+	match(player_state):
+		state.STARTJUMP:
+			velocity.y = jump_speed
 	pass
 
 
@@ -43,16 +59,22 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
+	print(is_on_floor())
 	if velocity == Vector2.ZERO:
 		player_state = state.IDLE
-	elif velocity.x != 0 and Input.is_action_just_pressed("jump") and is_on_floor():
+	if  Input.is_action_just_pressed("jump") and is_on_floor():
 		player_state = state.STARTJUMP
 	elif velocity.x != 0:
-		player_state = state.Running
+		player_state = state.RUNNING
 	if not is_on_floor():
 		if velocity.y < 0:
-			state.JUMP
-	
-	
+			player_state = state.JUMP
+		if velocity.y > 0:
+			player_state = state.FALL
+	handle_state(player_state)
+	update_animation(player_state)
+	#set gravity
+	velocity.y += gravity * delta
+	velocity = move_and_slide(velocity, Vector2.UP)
 
 
