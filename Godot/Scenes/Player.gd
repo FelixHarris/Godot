@@ -25,6 +25,10 @@ func _ready():
 
 
 func update_animation(anim):
+	if velocity.x < 0:
+		$Sprite.flip_h = true
+	elif velocity.x > 0:
+		$Sprite.flip_h = false
 	match(anim):
 		state.FALL:
 			$AnimationPlayer.play("Fall")
