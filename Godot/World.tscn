@@ -2,9 +2,7 @@
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tileset.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 186.5, 10 )
+[ext_resource path="res://Camera.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -199,15 +197,13 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 156, -5 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 2, 77 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 148, 58 )
-shape = SubResource( 1 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 65544, 0, 0, 65545, 0, 1, 65546, 0, 1, 65547, 0, 1, 65548, 0, 131076, 65549, 0, 2, 131080, 0, 131072, 131081, 0, 131073, 131082, 0, 4, 131083, 0, 131073, 131084, 0, 131073, 131085, 0, 131074 )
+tile_data = PoolIntArray( 65547, 0, 0, 65548, 0, 131076, 65549, 0, 2, 131083, 0, 131072, 131084, 0, 131073, 131085, 0, 131074, 131090, 0, 0, 196616, 0, 0, 262159, 0, 0, 327698, 0, 0, 458761, 0, 0, 458768, 0, 0, 524288, 0, 0, 524289, 0, 131076, 524290, 0, 1, 524291, 0, 2, 524294, 0, 0, 524300, 0, 0, 524301, 0, 2, 589824, 0, 65536, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65538, 589836, 0, 65541, 589837, 0, 65539, 655360, 0, 65541, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65538, 655368, 0, 0, 655369, 0, 2, 655372, 0, 65536, 655373, 0, 65538, 720896, 0, 65541, 720897, 0, 65537, 720898, 0, 65537, 720899, 0, 65538, 720904, 0, 65536, 720905, 0, 65538, 720908, 0, 65541, 720909, 0, 65539, 786432, 0, 131072, 786433, 0, 4, 786434, 0, 4, 786435, 0, 131074, 786440, 0, 131072, 786441, 0, 131074, 786444, 0, 131072, 786445, 0, 131074, 1638382, 0, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+script = ExtResource( 3 )
