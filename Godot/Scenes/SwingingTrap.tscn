@@ -5,6 +5,7 @@
 
 [sub_resource type="Animation" id=1]
 length = 2.0
+loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("..:rotation_degrees")
 tracks/0/interp = 1
@@ -18,6 +19,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "Swing"
+length = 1.8
 loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("..:rotation_degrees")
@@ -26,8 +28,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( -104, -0.25, 0, 0.3, 2.14351, 104, -0.4, -1.61519, 0.4, -1.61519, -104, -0.3, 0.263443, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.5, 1 )
+"points": PoolRealArray( -104, -0.25, 0, 0.3, 1.58382, 104, -0.4, 2.60269, 0.4, 2.60269, -104, -0.3, 0.263443, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8 )
 }
 
 [node name="SwingingTrap" type="Node2D"]
