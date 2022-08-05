@@ -4,8 +4,8 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=10]
-radius = 5.03207
-height = 5.93586
+radius = 4.02565
+height = 7.94869
 
 [sub_resource type="Animation" id=8]
 resource_name = "Attack"
@@ -150,7 +150,7 @@ vframes = 15
 frame = 40
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, 5.96046e-08 )
+position = Vector2( 0, 5.96046e-08 )
 scale = Vector2( 0.993627, 1 )
 shape = SubResource( 10 )
 

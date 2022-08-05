@@ -14,6 +14,10 @@ config/name="Godot"
 run/main_scene="res://Scenes/SwingingTrap.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameStats="*res://Scripts/game_stats.gd"
+
 [display]
 
 window/size/width=1280
@@ -70,6 +74,11 @@ jump={
 zoom={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+}
+reset={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":82,"unicode":0,"echo":false,"script":null)
  ]
 }
 

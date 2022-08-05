@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trap_spikes_anim_strip_7.png-86d2e1d3d04721d7ca4457d166da2426.stex"
+path="res://.import/save_point_saving_anim_strip_3.png-c4c57760da6a50c84ec76cd3bc9fd624.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://trap_spikes_anim_strip_7.png"
-dest_files=[ "res://.import/trap_spikes_anim_strip_7.png-86d2e1d3d04721d7ca4457d166da2426.stex" ]
+source_file="res://Sprites/save_point_saving_anim_strip_3.png"
+dest_files=[ "res://.import/save_point_saving_anim_strip_3.png-c4c57760da6a50c84ec76cd3bc9fd624.stex" ]
 
 [params]
 
