@@ -41,7 +41,7 @@ position = Vector2( 0, 16 )
 texture = ExtResource( 2 )
 hframes = 18
 
-[node name="Area2D" type="Area2D" parent="Sprite"]
+[node name="Area2D" type="Area2D" parent="Sprite" groups=["Deadly"]]
 position = Vector2( 0, -16 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D"]
@@ -49,6 +49,7 @@ polygon = PoolVector2Array( 0, 15, -7, 15, -12, 19, -9, 22, -9, 25, -12, 28, -9,
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
+autoplay = "Swing"
 anims/RESET = SubResource( 1 )
 anims/Swing = SubResource( 2 )
 

@@ -48,6 +48,7 @@ script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Path2D/PathFollow2D/Sprite")
+autoplay = "Spin"
 playback_speed = -3.0
 anims/RESET = SubResource( 3 )
 anims/Spin = SubResource( 4 )
@@ -63,7 +64,7 @@ rotate = false
 texture = ExtResource( 1 )
 hframes = 8
 
-[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite"]
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Sprite/Area2D"]
 shape = SubResource( 2 )
