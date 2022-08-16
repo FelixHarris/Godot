@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Quantum Loop.ogg-27096529f66b51172efcdec003fc8153.oggstr"
+
+[deps]
+
+source_file="res://SFX/Music/Royalty Free Music Loops OGG/Quantum Loop.ogg"
+dest_files=[ "res://.import/Quantum Loop.ogg-27096529f66b51172efcdec003fc8153.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

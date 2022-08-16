@@ -4,8 +4,8 @@ onready var music = AudioStreamPlayer.new()
 
 
 var music_tracks = {
-	"title_track":"res:"
-}
+	"res://SFX/Music/Royalty Free Music Loops OGG/Little Apprentice Loop.ogg"
+	}
 
 var music_db = 1
 var sound_db = 1
@@ -32,5 +32,5 @@ func play_sound_effect(sfx):
 	add_child(sound)
 	sound.play(
 		yield(sound,"finished")
-	)
+	
 	
