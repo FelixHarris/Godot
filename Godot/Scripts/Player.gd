@@ -58,7 +58,7 @@ func get_input():
 	else:
 		velocity.x = move_toward(velocity.x, 0, friction)
 
-
+if input
 
 
 func _physics_process(delta):
