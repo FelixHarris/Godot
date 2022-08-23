@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Sprites/clouds_mg_2.png" type="Texture" id=21]
 [ext_resource path="res://Sprites/clouds_bg.png" type="Texture" id=22]
 [ext_resource path="res://Sprites/glacial_mountains.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/background.png" type="Texture" id=24]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -431,6 +432,9 @@ script = ExtResource( 11 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 720, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
 position = Vector2( 728, 341 )
@@ -438,6 +442,8 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 20 )
 
 [node name="Cloudsbg" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_mirroring = Vector2( 1536, 0 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/Cloudsbg"]
 position = Vector2( 555, 218 )
@@ -445,21 +451,33 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 22 )
 
 [node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 1536, 0 )
+visible = false
+motion_scale = Vector2( 1.05, 1 )
+motion_mirroring = Vector2( 1152, 0 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/Mountains"]
-position = Vector2( 751, 246 )
-scale = Vector2( 4, 4 )
+position = Vector2( 493, 239 )
+scale = Vector2( 3, 3 )
 texture = ExtResource( 23 )
 
 [node name="Cloudsmg" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.6, 1 )
+visible = false
+motion_scale = Vector2( 3, 1 )
 motion_mirroring = Vector2( 1536, 0 )
 
 [node name="Sprite4" type="Sprite" parent="ParallaxBackground/Cloudsmg"]
 position = Vector2( 578, 165 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 21 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.05, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 482, 179 )
+scale = Vector2( 4, 1.85 )
+texture = ExtResource( 24 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 530, 214 )
