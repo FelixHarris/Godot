@@ -103,44 +103,44 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Mainmenu" type="MarginContainer" parent="."]
 margin_left = 36.0
 margin_top = 41.0
 margin_right = 719.0
 margin_bottom = 142.0
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Mainmenu"]
 margin_right = 683.0
 margin_bottom = 101.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Mainmenu/CenterContainer"]
 margin_right = 683.0
 margin_bottom = 101.0
 
-[node name="Label" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Mainmenu/CenterContainer/HBoxContainer"]
 margin_top = 2.0
 margin_right = 492.0
 margin_bottom = 99.0
 custom_fonts/font = SubResource( 5 )
 text = "Metroidvania"
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Mainmenu/CenterContainer/HBoxContainer"]
 margin_left = 496.0
 margin_right = 683.0
 margin_bottom = 101.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Mainmenu/CenterContainer/HBoxContainer/CenterContainer"]
 margin_right = 187.0
 margin_bottom = 101.0
 
-[node name="Start" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 margin_right = 187.0
 margin_bottom = 31.0
 custom_fonts/font = SubResource( 6 )
 text = "Start"
 flat = true
 
-[node name="Options" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 margin_top = 35.0
 margin_right = 187.0
 margin_bottom = 66.0
@@ -148,7 +148,7 @@ custom_fonts/font = SubResource( 7 )
 text = "Options"
 flat = true
 
-[node name="Quit" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 margin_top = 70.0
 margin_right = 187.0
 margin_bottom = 101.0
@@ -156,82 +156,87 @@ custom_fonts/font = SubResource( 8 )
 text = "Quit"
 flat = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-margin_left = 1593.0
+[node name="OptionsMenu" type="MarginContainer" parent="."]
+margin_left = 1415.0
 margin_top = 31.0
-margin_right = 1781.0
-margin_bottom = 121.0
+margin_right = 1715.0
+margin_bottom = 133.0
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer2"]
-margin_right = 228.0
+[node name="CenterContainer" type="CenterContainer" parent="OptionsMenu"]
+margin_right = 300.0
 margin_bottom = 102.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/CenterContainer"]
-margin_right = 228.0
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/CenterContainer"]
+margin_right = 300.0
 margin_bottom = 102.0
+rect_min_size = Vector2( 300, 0 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/CenterContainer/VBoxContainer"]
-margin_right = 228.0
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
+margin_right = 300.0
 margin_bottom = 20.0
+alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_right = 60.0
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 136.0
+margin_right = 196.0
 margin_bottom = 20.0
 custom_fonts/font = SubResource( 9 )
 text = "SFX"
 
-[node name="Soundslider" type="HSlider" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 64.0
-margin_right = 164.0
+[node name="Soundslider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 200.0
+margin_right = 300.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 100, 0 )
 max_value = 1.0
 step = 0.1
 value = 1.0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 margin_top = 24.0
-margin_right = 228.0
+margin_right = 300.0
 margin_bottom = 44.0
+alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 100.0
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 96.0
+margin_right = 196.0
 margin_bottom = 20.0
 custom_fonts/font = SubResource( 10 )
 text = "MUSIC"
 
-[node name="HSlider" type="HSlider" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 104.0
-margin_right = 204.0
+[node name="HSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 200.0
+margin_right = 300.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 100, 0 )
 max_value = 1.0
 step = 0.1
 value = 1.0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer2/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 margin_top = 48.0
-margin_right = 228.0
+margin_right = 300.0
 margin_bottom = 72.0
 
-[node name="Label" type="Label" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3"]
 margin_top = 2.0
 margin_right = 200.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 11 )
 text = "FULLSCREEN"
 
-[node name="CheckBox" type="CheckBox" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer3"]
+[node name="CheckBox" type="CheckBox" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 204.0
 margin_right = 228.0
 margin_bottom = 24.0
 
-[node name="Back" type="Button" parent="MarginContainer2/CenterContainer/VBoxContainer"]
+[node name="Back" type="Button" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 margin_top = 76.0
-margin_right = 228.0
+margin_right = 300.0
 margin_bottom = 102.0
 custom_fonts/font = SubResource( 12 )
-text = "BACK"
+text = " BACK"
 flat = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -264,8 +269,9 @@ position = Vector2( 696, 359 )
 scale = Vector2( 7.977, 3.008 )
 texture = ExtResource( 2 )
 
-[connection signal="pressed" from="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_Options_pressed"]
-[connection signal="value_changed" from="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer/Soundslider" to="." method="_on_Soundslider_value_changed"]
-[connection signal="value_changed" from="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
-[connection signal="toggled" from="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_toggled"]
-[connection signal="pressed" from="MarginContainer2/CenterContainer/VBoxContainer/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="value_changed" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer/Soundslider" to="." method="_on_Soundslider_value_changed"]
+[connection signal="value_changed" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="toggled" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="pressed" from="OptionsMenu/CenterContainer/VBoxContainer/Back" to="." method="_on_Back_pressed"]
