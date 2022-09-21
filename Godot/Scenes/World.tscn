@@ -445,7 +445,6 @@ font_data = ExtResource( 12 )
 script = ExtResource( 11 )
 
 [node name="Rock Head" parent="." instance=ExtResource( 25 )]
-position = Vector2( 911, 174 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
