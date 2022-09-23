@@ -8,6 +8,7 @@ extents = Vector2( 16, 16 )
 
 [sub_resource type="Animation" id=6]
 resource_name = "Fall"
+length = 1.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -15,10 +16,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 0.7, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 200 ) ]
+"values": [ Vector2( 911, 173 ), Vector2( 911, 207 ), Vector2( 911, 207 ), Vector2( 911, 173 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 1.6, 1.8, 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0, 1, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -47,7 +60,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 911, 173 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -102,6 +115,5 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 0, 35.5 )
 shape = SubResource( 5 )
 
-[connection signal="body_entered" from="." to="." method="_on_Rock_Head_body_entered"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
