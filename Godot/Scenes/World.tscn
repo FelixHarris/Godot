@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://Sprites/glacial_mountains.png" type="Texture" id=23]
 [ext_resource path="res://Sprites/background.png" type="Texture" id=24]
 [ext_resource path="res://Scenes/Rock Head.tscn" type="PackedScene" id=25]
+[ext_resource path="res://RockHeadIdle.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -444,6 +445,9 @@ font_data = ExtResource( 12 )
 [node name="World" type="Node2D"]
 script = ExtResource( 11 )
 
+[node name="RockHeadIdle" parent="." instance=ExtResource( 26 )]
+position = Vector2( 911, 157 )
+
 [node name="Rock Head" parent="." instance=ExtResource( 25 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -570,7 +574,7 @@ position = Vector2( 707, 210 )
 position = Vector2( 747, 210 )
 
 [node name="SavePoint2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 804, 79 )
+position = Vector2( 823, 106 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

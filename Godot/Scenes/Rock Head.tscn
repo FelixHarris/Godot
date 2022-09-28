@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Free/Traps/Rock Head/Blink (42x42).png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Rock Head.gd" type="Script" id=2]
@@ -93,6 +93,9 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 33, 19.5 )
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10, 18 )
+
 [node name="Rock Head" type="Area2D" groups=["Deadly"]]
 script = ExtResource( 2 )
 
@@ -115,5 +118,10 @@ anims/RESET = SubResource( 3 )
 position = Vector2( 0, 35.5 )
 shape = SubResource( 5 )
 
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource( 7 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
