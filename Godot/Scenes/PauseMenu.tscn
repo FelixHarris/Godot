@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://OtherAssets/PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 2 )
 
 [node name="PauseMenu" type="Control"]
 pause_mode = 2
@@ -21,33 +38,37 @@ margin_right = 669.0
 margin_bottom = 372.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_right = 83.0
-margin_bottom = 86.0
+margin_right = 240.0
+margin_bottom = 142.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 83.0
-margin_bottom = 14.0
+margin_right = 240.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
 text = "Paused"
 align = 1
 
 [node name="Resume" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 83.0
-margin_bottom = 38.0
+margin_top = 44.0
+margin_right = 240.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 2 )
 text = "Resume"
 flat = true
 
 [node name="Main Menu" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 42.0
-margin_right = 83.0
-margin_bottom = 62.0
+margin_top = 78.0
+margin_right = 240.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 3 )
 text = "Main Menu"
 flat = true
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 66.0
-margin_right = 83.0
-margin_bottom = 86.0
+margin_top = 112.0
+margin_right = 240.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 4 )
 text = "Quit"
 flat = true
 

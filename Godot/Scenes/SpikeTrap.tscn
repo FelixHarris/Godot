@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/trap_spikes_anim_strip_7.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 8 )
+extents = Vector2( 7, 7.5 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -64,6 +64,7 @@ tracks/1/keys = {
 [node name="Area2D" type="Area2D" groups=["Deadly"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.5 )
 shape = SubResource( 1 )
 disabled = true
 

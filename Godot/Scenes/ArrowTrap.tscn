@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/trap_spikes_anim_strip_7.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/spikes_trap.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/ArrowTrap.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.5, 2 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 11 )
+
+[node name="ArrowTrap" type="Node2D"]
+position = Vector2( 580, 323 )
+script = ExtResource( 3 )
+
+[node name="Arrow" type="Area2D" parent="." groups=["Deadly"]]
+
+[node name="Sprite" type="Sprite" parent="Arrow"]
+rotation = 1.5708
+texture = ExtResource( 2 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow"]
+position = Vector2( -5.5, 0 )
+shape = SubResource( 1 )
+
+[node name="ArrowTrapSprite" type="Sprite" parent="."]
+position = Vector2( 34, 0 )
+rotation = 1.5708
+texture = ExtResource( 1 )
+hframes = 7
+frame = 1
+
+[node name="Position2D" type="Position2D" parent="ArrowTrapSprite"]
+position = Vector2( -3.98199e-05, -11 )
+
+[node name="ArrowEnd" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowEnd"]
+position = Vector2( -122, 0 )
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="ArrowEnd" to="." method="_on_ArrowEnd_area_entered"]

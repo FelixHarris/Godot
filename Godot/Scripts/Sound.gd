@@ -9,11 +9,11 @@ var music_tracks = {
 
 var sound_effects = {
 	"jump":"res://SFX/jump (1).wav",
-	"death":"res://SFX/explosion.wav"
+	"death":"res://SFX/Death.wav"
 	}
 
 var music_db = 1
-var sound_db = 1
+var sound_db = 0.6
 
 func change_music_volume(value):
 	music_db = linear2db(value)

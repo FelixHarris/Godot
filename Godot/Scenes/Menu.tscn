@@ -8,10 +8,13 @@
 
 [sub_resource type="DynamicFont" id=5]
 size = 91
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 1
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 25
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=7]
@@ -104,29 +107,29 @@ anchor_bottom = 1.0
 script = ExtResource( 3 )
 
 [node name="Mainmenu" type="MarginContainer" parent="."]
-margin_left = 36.0
-margin_top = 41.0
-margin_right = 719.0
-margin_bottom = 142.0
+margin_left = 302.0
+margin_top = 203.0
+margin_right = 996.0
+margin_bottom = 304.0
 
 [node name="CenterContainer" type="CenterContainer" parent="Mainmenu"]
-margin_right = 683.0
+margin_right = 694.0
 margin_bottom = 101.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Mainmenu/CenterContainer"]
-margin_right = 683.0
+margin_right = 694.0
 margin_bottom = 101.0
 
 [node name="Label" type="Label" parent="Mainmenu/CenterContainer/HBoxContainer"]
 margin_top = 2.0
-margin_right = 492.0
+margin_right = 503.0
 margin_bottom = 99.0
 custom_fonts/font = SubResource( 5 )
 text = "Metroidvania"
 
 [node name="CenterContainer" type="CenterContainer" parent="Mainmenu/CenterContainer/HBoxContainer"]
-margin_left = 496.0
-margin_right = 683.0
+margin_left = 507.0
+margin_right = 694.0
 margin_bottom = 101.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Mainmenu/CenterContainer/HBoxContainer/CenterContainer"]
@@ -157,10 +160,10 @@ text = "Quit"
 flat = true
 
 [node name="OptionsMenu" type="MarginContainer" parent="."]
-margin_left = 1415.0
-margin_top = 31.0
-margin_right = 1715.0
-margin_bottom = 133.0
+margin_left = 1800.0
+margin_top = 205.0
+margin_right = 2100.0
+margin_bottom = 307.0
 
 [node name="CenterContainer" type="CenterContainer" parent="OptionsMenu"]
 margin_right = 300.0
@@ -271,6 +274,7 @@ texture = ExtResource( 2 )
 
 [connection signal="pressed" from="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Mainmenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="value_changed" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer/Soundslider" to="." method="_on_Soundslider_value_changed"]
 [connection signal="value_changed" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="toggled" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_toggled"]

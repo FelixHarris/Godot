@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/strange_door_closed_anim_strip_10.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/buttom.png" type="Texture" id=2]
@@ -86,6 +86,22 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "DoorClosing"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Door:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -219,6 +235,7 @@ script = ExtResource( 5 )
 anims/ButtonDown = SubResource( 4 )
 anims/ButtonUp = SubResource( 5 )
 anims/DoorClosed = SubResource( 6 )
+anims/DoorClosing = SubResource( 9 )
 anims/DoorOpen = SubResource( 8 )
 anims/RESET = SubResource( 7 )
 
