@@ -2,8 +2,12 @@ extends Node
 
 onready var game_start_time = OS.get_ticks_msec()
 var current_spawn = null
+var timer_on = true
+
+
 func start_level():
 	current_spawn=null
+	#if timer_on==true:
 	game_start_time = OS.get_ticks_msec()
 
 func reset():

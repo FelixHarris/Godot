@@ -1,5 +1,5 @@
 extends Control
-
+var timer_on=true
 
 var is_paused = false setget set_is_paused
 
@@ -11,12 +11,12 @@ func set_is_paused(value):
 	is_paused = value
 	get_tree().paused = is_paused
 	visible = is_paused
-	
+	timer_on=false
 
 
 func _on_Resume_pressed():
 	self.is_paused = false
-	
+	timer_on=true
 	
 
 
